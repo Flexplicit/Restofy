@@ -1,0 +1,35 @@
+@model BLL.App.DTO.OrderModels.Restaurant
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<h4>Restaurant</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <partial name="RestaurantPartials/_RestaurantCreateEditPartial" model="Model"/>
+            <div class="form-group hvr-grow mt-1">
+                <input type="submit" id="button_create" value="Create" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <button type="button" id="button_back" class="btn btn-primary fa-sm hvr-grow">
+        <i class="fas fa-arrow-left"></i>
+        Back
+    </button>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>
+
+           $("#button_back").click(function (){
+           window.history.back()});
+        </script>
+}

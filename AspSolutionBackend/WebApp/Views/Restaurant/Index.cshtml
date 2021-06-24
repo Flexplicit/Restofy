@@ -1,0 +1,15 @@
+@model WebApp.ViewModels.Restaurant.RestaurantIndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<button type="button" asp-action="Index" class="btn btn-primary btn-md round">
+    <i class="fas fa-plus mr-1"></i>
+    Add Credit Card
+</button>
+
+
+<div class="d-flex flex-wrap justify-content-center restaurants-wrapper">
+    <partial name="RestaurantPartials/_RestaurantIndexPartial" model="Model"/>
+
+</div>

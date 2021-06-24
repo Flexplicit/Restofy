@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApp</name>
+    </assembly>
+    <members>
+        <member name="T:WebApp.ApiControllers.BillController">
+            <summary>
+            RESTful api service for Bills
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.BillController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for addresses
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.BillController.GetBillByOrderId(System.Guid)">
+            <summary>
+            Gets a singular billDTO according to order id
+            </summary>
+            <param name="orderId">orderId to get the bill from db</param>
+            <returns>A singular bill object</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.BillLineController">
+            <summary>
+            RESTful api service for BillLines
+            /// </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.BillLineController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for addresses
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.BillLineController.GetBillBillLines(System.Guid)">
+            <summary>
+            Gets all the billLines that a bill has
+            </summary>
+            <returns>All the BillLines</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.ContactController">
+            <summary>
+            RESTful api service for Contacts
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for Contacts
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactController.GetContacts(System.Nullable{System.Guid})">
+            <summary>
+            Gets all restaurantContacts if it has the id, else it gets all user contacts
+            </summary>
+            <returns>All the Contact objects</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactController.PutContact(System.Guid,PublicApiDTO.v1.v1.OrderModels.Contact)">
+            <summary>
+            Updates a Contact according to the id
+            </summary>
+            <param name="id">Id of the Contact to update</param>
+            <param name="contact">Updated version of the Contact</param>
+            <returns>Bad request if update fails, NoContent if succeeds</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactController.PostContact(PublicApiDTO.v1.v1.OrderModels.ContactCreate)">
+            <summary>
+            Creates a Contact object
+            </summary>
+            <param name="contact">Contact object to create</param>
+            <returns>Created Contact object with a Guid id attached to it</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactController.DeleteContact(System.Guid)">
+            <summary>
+            Deletes a contact object according to the given id
+            </summary>
+            <param name="id">Guid id to delete with</param>
+            <returns>NotFound 404 if id doesn't exist and NoContent if deletion was successful</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.ContactTypeController">
+            <summary>
+            RESTful api service for Bills
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactTypeController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for addresses
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.ContactTypeController.GetContactTypes">
+            <summary>
+            Gets all the ContactTypes
+            </summary>
+            <returns>All the ContactType objects</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.CostController">
+            <summary>
+            RESTful api service for Food cost
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.CostController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for addresses
+            </summary>
+            <param name="bll">Injected BLL</param>
+            <param name="mapper">Injected Mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.CostController.GetCostByFoodId(System.Guid)">
+            <summary>
+             Gets a specific cost according to the foodId
+            </summary>
+            <param name="foodId">foodId</param>
+            <returns>A cost dto object</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.CreditCardController">
+            <summary>
+            RESTful api service for CreditCards
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.CreditCardController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for addresses
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected Mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.CreditCardController.GetCreditCards">
+            <summary>
+            Gets all the Credit cards
+            </summary>
+            <returns>All the cards</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.CreditCardController.GetCreditCard(System.Guid)">
+            <summary>
+            Gets a specific credit card
+            </summary>
+            <param name="id">Id of the credit card</param>
+            <returns>A CreditCard DTO object</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.CreditCardController.PutCreditCard(System.Guid,PublicApiDTO.v1.v1.OrderModels.CreditCard)">
+            <summary>
+            Updates a CreditCard object
+            </summary>
+            <param name="id">Id of the CreditCard object to update</param>
+            <param name="creditCard">CreditCard object with the updated values</param>
+            <returns>Bad request if update fails, NoContent if succeeds</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.CreditCardController.PostCreditCard(PublicApiDTO.v1.v1.OrderModels.CreditCardCreate)">
+            <summary>
+            Creates a CreditCard object which is linked to the user
+            </summary>
+            <param name="creditCard">Object to create</param>
+            <returns>A created CreditCardDTO object</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.CreditCardController.DeleteCreditCard(System.Guid)">
+            <summary>
+            Deletes a CreditCard according to the id
+            </summary>
+            <param name="id">Guid id to delete with</param>
+            <returns>NotFound 404 if id doesn't exist and NoContent if deletion was successful</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.FoodController">
+            <summary>
+            Represents a RESTful food service
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for Food API
+            </summary>
+            <param name="bll">Injected bll via DI</param>
+            <param name="mapper">Injected Mapper via DI</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodController.GetFoods(System.Guid)">
+            <summary>
+            Returns menu of food which is ordered ordered according to the food's food group from a specific restaurant
+            </summary>
+            <param name="restaurantId">Restaurant's id from where we're requesting the food</param>
+            <returns>List of food objects that belong to the corresponding restaurant</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodController.GetFood(System.Guid)">
+            <summary>
+            Gets a specific food object according to the given id
+            </summary>
+            <param name="id">Id of the food to return</param>
+            <returns>Food object</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodController.Update(System.Guid,PublicApiDTO.v1.v1.OrderModels.Food)">
+            <summary>
+             Updates the food item in the db
+            </summary>
+            <param name="id">id of the food to update</param>
+            <param name="foodDTO">Updated version of the food</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodController.Create(PublicApiDTO.v1.v1.OrderModels.FoodCreate)">
+            <summary>
+            Creates a new food object
+            </summary>
+            <param name="foodCreateDTO">Food object to create</param>
+            <returns>Newly created food object</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodController.Delete(System.Guid)">
+            <summary>
+            Deletes a food object according to the given id
+            </summary>
+            <param name="id">Id of the food to delete</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.FoodGroupController">
+            <summary>
+            RESTful api service for FoodGroups
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodGroupController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for FoodGroup API
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodGroupController.GetFoodGroups">
+            <summary>
+            Gets all the available FoodGroups
+            </summary>
+            <returns>All the available FoodGroupDTOs</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodGroupController.GetFoodGroup(System.Guid)">
+            <summary>
+            Gets a specific FoodGroup object
+            </summary>
+            <param name="id">Guid id value of the FoodGroup</param>
+            <returns>A singular FoodGroup object</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.FoodInOrderController">
+            <summary>
+            RESTful api service for FoodInOrder objects
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodInOrderController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for FoodInOrder API
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodInOrderController.GetFoodInOrderByOrderId(System.Guid)">
+            <summary>
+            Gets food in specified order
+            </summary>
+            <param name="id">order id</param>
+            <returns>FoodInOrder object with extra food info</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodInOrderController.PutFoodInOrder(System.Guid,PublicApiDTO.v1.v1.OrderModels.FoodInOrder)">
+            <summary>
+            Updates a FoodInOrder object according to the id
+            </summary>
+            <param name="id">Id of the FoodInOrder object to update</param>
+            <param name="foodInOrder">Updated version of the FoodInOrder object</param>
+            <returns>Bad request if update fails, NoContent if succeeds</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodInOrderController.PostFoodInOrder(PublicApiDTO.v1.v1.OrderModels.FoodInOrderCreate[])">
+            <summary>
+            Creates a FoodInOrder object
+            </summary>
+            <param name="foodInOrder">FoodInOrder object to create</param>
+            <returns>Created FoodInOrder object with a Guid id attached to it</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.FoodInOrderController.DeleteFoodInOrder(System.Guid)">
+            <summary>
+            Deletes a FoodInOrder object according to the given id
+            </summary>
+            <param name="id">Guid id to delete with</param>
+            <returns>NotFound 404 if id doesn't exist and NoContent if deletion was successful</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.Identity.AccountController">
+            <summary>
+             Current api handles logging in and making new requests
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.Identity.AccountController.#ctor(Microsoft.AspNetCore.Identity.UserManager{Domain.Identity.AppUser},Microsoft.AspNetCore.Identity.SignInManager{Domain.Identity.AppUser},Microsoft.Extensions.Logging.ILogger{WebApp.ApiControllers.Identity.AccountController},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for AccountManagement
+            </summary>
+            <param name="userManager">Injected Via DI</param>
+            <param name="signInManager">Injected Via DI</param>
+            <param name="logger">Injected Via DI</param>
+            <param name="cfg">Injected Via DI</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.Identity.AccountController.Login(PublicApiDTO.v1.v1.AuthenticationDTO.Login)">
+            <summary>
+            Logs in the user via the post request
+            </summary>
+            <param name="loginDTO">Object needed to validate the login</param>
+            <returns>Object with a jwt token</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.Identity.AccountController.Register(PublicApiDTO.v1.v1.AuthenticationDTO.Register)">
+            <summary>
+            Registers an user with posted object's details
+            </summary>
+            <param name="registerDTO">Object with fields that are necessary for registering a new user</param>
+            <returns>Object with a jwt token</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.OrderController">
+            <summary>
+            RESTful api service for Ordering food
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for Contacts
+            </summary>
+            <param name="bll">Injected bll via DI</param>
+            <param name="mapper">Injected mapper via DI</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.GetOrders">
+            <summary>
+            Gets all order
+            </summary>
+            <returns>All orders</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.GetActiveOrders">
+            <summary>
+            Gets all active orders of a restaurant according to the extracted user id from the jwt
+            </summary>
+            <returns>All the active order a restaurant has</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.GetUserOrders">
+            <summary>
+            Gets all finished and currently active user orders according to the extracted user id from the jwt
+            </summary>
+            <returns>All the active and inactive orders a user has</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.GetRestaurantOrders">
+            <summary>
+            Gets all finished and currently active user orders according to the extracted restaurant user id from the jwt
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.CreateOrder(PublicApiDTO.v1.v1.OrderModels.OrderCreate)">
+            <summary>
+            Creates a new Order
+            </summary>
+            <param name="orderCreateDTO">Order object that we create, creates an order as well</param>
+            <returns>Created order with updated fields</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.OrderConfirm(PublicApiDTO.v1.v1.OrderModels.OrderConfirmRestaurant)">
+            <summary>
+            API for the restaurant owner to confirm an order 
+            </summary>
+            <param name="orderConfirmRestaurantDTO">Order confirmation contract with a time till the food is ready</param>
+            <returns>A fully completed Order object with all the order details</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.GetOrder(System.Guid)">
+            <summary>
+            Gets a specific order
+            </summary>
+            <param name="id">Id of the order</param>
+            <returns>An Order object</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.PutOrder(System.Guid,PublicApiDTO.v1.v1.OrderModels.Order)">
+            <summary>
+            Updates an Order object according to the id 
+            </summary>
+            <param name="id">Id of the order to update</param>
+            <param name="order">Updated version of the order</param>
+            <returns>Bad request if update fails, NoContent if succeeds</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.OrderController.DeleteOrder(System.Guid)">
+            <summary>
+            Deletes an Order object according to the given id
+            </summary>
+            <param name="id">Guid id to delete with</param>
+            <returns>NotFound 404 if id doesn't exist and NoContent if deletion was successful</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.PaymentTypeController">
+            <summary>
+            RESTful api service for different Payment Types
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.PaymentTypeController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for Contacts
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.PaymentTypeController.GetPaymentTypes">
+            <summary>
+            Gets all the available payment types
+            </summary>
+            <returns>A list of PaymentType objects</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.PaymentTypeController.GetPaymentType(System.Guid)">
+            <summary>
+            Gets a specific PaymentType by the id
+            </summary>
+            <param name="id">Id of the PaymentType object</param>
+            <returns>A PaymentType object</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.RestaurantController">
+            <summary>
+             Represents a RESTful Restaurant service
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for Restaurant API
+            </summary>
+            <param name="bll">Injected bll DI</param>
+            <param name="mapper">Injected mapper via DI</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.GetRestaurants">
+            <summary>
+            Returns all restaurants that have an active subscription.
+            </summary>
+            <returns>Returns a list of restaurant objects</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.GetMyRestaurants">
+            <summary>
+            Gets all restaurants that belong to the user that requests them, will be authenticated via JWT.
+            </summary>
+            <returns>Returns a list of restaurant objects</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.GetRestaurant(System.Guid)">
+            <summary>
+             Gets a specific restaurant by the id
+            </summary>
+            <param name="id">Id of the requested restaurant</param>
+            <returns>An object of the restaurant</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.PutRestaurant(System.Guid,PublicApiDTO.v1.v1.OrderModels.RestaurantEdit)">
+            <summary>
+            Updates a specific restaurant
+            </summary>
+            <param name="id">Id of the restaurant</param>
+            <param name="restaurant">Updated object version of the restaurant</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.PostRestaurant(PublicApiDTO.v1.v1.OrderModels.RestaurantCreate)">
+            <summary>
+            Creates a new restaurant
+            </summary>
+            <param name="restaurant">Object of the new restaurant</param>
+            <returns>An object of the newly created restaurant</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantController.DeleteRestaurant(System.Guid)">
+            <summary>
+            Deletes a restaurant, only restaurant owner can delete it
+            </summary>
+            <param name="id">Id of the restaurant to delete</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.RestaurantSubscriptionController">
+             <summary>
+             RESTful api service for RestaurantSubscriptions
+             </summary>
+            
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantSubscriptionController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for RestaurantSubscription Dependencies
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected Mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantSubscriptionController.GetRestaurantSubscriptions(System.Guid)">
+            <summary>
+            Returns singular RestaurantSubscription, which shows how long subscription lasts.
+            </summary>
+            <param name="restaurantId">Id of the restaurant to get the subscription for</param>
+            <returns>PublicApiDTO Object of the subscription</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.RestaurantSubscriptionController.PostRestaurantSubscription(PublicApiDTO.v1.v1.OrderModels.RestaurantSubscriptionCreate)">
+            <summary>
+            Adds a restaurantSubscription to the restauarant in the given object
+            </summary>
+            <param name="restaurantSubscription">JSON object of the RestaurantSubscription to add</param>
+            <returns>JSON created object</returns>
+        </member>
+        <member name="T:WebApp.ApiControllers.SubscriptionController">
+            <summary>
+            RESTful api service for RestaurantSubscriptions
+            </summary>
+        </member>
+        <member name="M:WebApp.ApiControllers.SubscriptionController.#ctor(Contracts.BLL.App.IAppBLL,AutoMapper.IMapper)">
+            <summary>
+            Constructor for Subscription APIs
+            </summary>
+            <param name="bll">Injected bll</param>
+            <param name="mapper">Injected Mapper</param>
+        </member>
+        <member name="M:WebApp.ApiControllers.SubscriptionController.GetSubscriptions">
+            <summary>
+            Retrieves all available subscriptions from the database
+            </summary>
+            <returns>Returns all available subscriptions</returns>
+        </member>
+        <member name="M:WebApp.ApiControllers.SubscriptionController.GetSubscription(System.Guid)">
+            <summary>
+            Returns singular Subscription with all the data it has
+            </summary>
+            <param name="id">Id of the subscription to retrieve</param>
+            <returns>PublicApiDTO Object of the subscription</returns>
+        </member>
+        <member name="T:WebApp.Areas.IdentityErrors.LocalizedCustomIdentityErrorDescriber">
+            <summary>
+            Overrides original ASP.NET common Identity errors so we could modify them according to resources(localization).
+            </summary>
+        </member>
+        <member name="T:WebApp.ExternalApis.GyazoApiService">
+            <summary>
+            This is used in the backend to store images in an external cloud server via gyazo
+            </summary>
+        </member>
+        <member name="M:WebApp.ExternalApis.GyazoApiService.UploadImageViaApi(System.String)">
+            <summary>
+            Uploads an encoded base64 image to Gyazo and returns a short .jpg/png/jpeg link
+            Action only takes 200-300ms and helps us to avoid adding bloated blobs/base64 strings into database.
+            </summary>
+            <param name="base64EncodedImage"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:WebApp.SpecialExternalApiHelpers.GyazoResponse">
+            <summary>
+            Struct for transporting GyazoResponses
+            </summary>
+        </member>
+        <member name="P:WebApp.SpecialExternalApiHelpers.GyazoResponse.Url">
+            <summary>
+            Url of the picture if upload went Successfully
+            </summary>
+        </member>
+        <member name="P:WebApp.SpecialExternalApiHelpers.GyazoResponse.IsSuccessfulResponse">
+            <summary>
+            Is true if request was successful
+            </summary>
+        </member>
+        <member name="P:WebApp.SpecialExternalApiHelpers.GyazoResponse.Message">
+            <summary>
+            Error messages is any occurred
+            </summary>
+        </member>
+    </members>
+</doc>

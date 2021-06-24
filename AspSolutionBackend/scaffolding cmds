@@ -1,0 +1,56 @@
+﻿
+
+==========Controllers==========
+dotnet aspnet-codegenerator controller -name RestaurantController       -actions -m  Restaurant       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name FoodGroupController       -actions -m  FoodGroup       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name FoodController       -actions -m  Food       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name CostController       -actions -m  Cost       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name RestaurantSubscriptionController       -actions -m  RestaurantSubscription       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name SubscriptionController       -actions -m  Subscription       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name ContactController       -actions -m  Contact       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name ContactTypeController       -actions -m  ContactType       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name RestaurantAddressController       -actions -m  RestaurantAddress       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name AddressController       -actions -m  Address       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name CreditCardController       -actions -m  CreditCard       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name CreditInfoController       -actions -m  CreditCardInfo       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name OrderController       -actions -m  Order       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name FoodInOrderController       -actions -m  FoodInOrder       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name PaymentTypeController       -actions -m  PaymentType       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name BillController       -actions -m  Bill       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name BillLineController       -actions -m  BillLine       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+==========Controllers==========
+
+==========Identity==========
+dotnet aspnet-codegenerator controller -name RolesController       -actions -m  AppRole       -dc AppDbContext -outDir Areas/Admin/Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name UsersController       -actions -m  AppUser      -dc AppDbContext -outDir Areas/Admin/Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+==========Identity==========
+
+
+==========API Controllers==========
+dotnet aspnet-codegenerator controller -api -name RestaurantController       -actions -m  Restaurant       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  FoodGroupController       -actions -m  FoodGroup       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  FoodController       -actions -m  Food       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  CostController       -actions -m  Cost       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  RestaurantSubscriptionController       -actions -m  RestaurantSubscription       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  SubscriptionController       -actions -m  Subscription       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  ContactController       -actions -m  Contact       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  ContactTypeController       -actions -m  ContactType       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  RestaurantAddressController       -actions -m  RestaurantAddress       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  AddressController       -actions -m  Address       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  RestaurantUserController       -actions -m  RestaurantUser       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  UserController       -actions -m  User       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  CreditCardController       -actions -m  CreditCard       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  CreditInfoController       -actions -m  CreditCardInfo       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  OrderController       -actions -m  Order       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  FoodInOrderController       -actions -m  FoodInOrder       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  PaymentTypeController       -actions -m  PaymentType       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  BillController       -actions -m  Bill       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -api -name  BillLineController       -actions -m  BillLine       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+==========API Controllers==========
+
+
+dotnet aspnet-codegenerator controller -name RolesController       -actions -m  AppRole       -dc AppDbContext -outDir Areas/Admin/Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name UsersController       -actions -m  Domain.IdentityModels.AppUser      -dc AppDbContext -outDir Areas/Admin/Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+
+
+dotnet aspnet-codegenerator controller -api -name  StorageController       -actions -m  Domain.MainModels.Storage       -dc AppDbContext -outDir ApiControllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f

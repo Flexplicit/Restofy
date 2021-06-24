@@ -1,0 +1,26 @@
+﻿@model WebApp.ViewModels.Restaurant.RestaurantIndexViewModel
+
+@{
+    ViewData["Title"] = "MyRestaurants";
+}
+
+
+<button type="button" id="button_create" class="btn btn-primary btn-md round hvr-grow mt-1" asp-controller="Restaurant" asp-action="Create">
+    <i class="fas fa-plus mr-1"></i>
+    Create new
+</button>
+
+
+<div class="d-flex flex-wrap justify-content-center restaurants-wrapper">
+    <partial name="RestaurantPartials/_RestaurantIndexPartial" model="Model"/>
+
+</div>
+
+@section Scripts
+{
+    <script>
+       $("#button_create").click(function (){
+       window.location.href = "Create"
+       });
+    </script>
+}

@@ -1,0 +1,102 @@
+﻿@using BLL.App.DTO.OrderModels
+@using BLL.App.DTO.OrderModels.DbEnums
+@using Microsoft.AspNetCore.Components.Web
+@model WebApp.ViewModels.Menu.MenuActionViewModel
+@{
+    ViewData["Title"] = "RestaurantMenu";
+}
+
+
+
+@functions
+{
+    public int CounterCart = 0;
+
+
+    public int IncrementCart()
+    {
+        return CounterCart++;
+    }
+
+    static IEnumerable<List<Food>> GetFoodInGroups(IEnumerable<Food> foods)
+    {
+        List<List<Food>> groupedFood = new();
+        var tmpGroup = new List<Food>();
+        var prevGroup = FoodGroupType.Burger;
+        foreach (var food in foods)
+        {
+            if (prevGroup == food!.FoodGroup!.FoodGroupType)
+            {
+                tmpGroup.Add(food);
+                continue;
+            }
+            if (tmpGroup.Count != 0)
+            {
+                groupedFood.Add(tmpGroup);
+                tmpGroup.Clear();
+                prevGroup = food.FoodGroup.FoodGroupType;
+                tmpGroup.Add(food);
+                continue;
+            }
+            prevGroup = food.FoodGroup.FoodGroupType;
+            tmpGroup.Add(food);
+        }
+        if (tmpGroup.Count != 0)
+        {
+            groupedFood.Add(tmpGroup);
+        }
+        return groupedFood;
+    }
+}
+
+<partial name="RestaurantPartials/_RestaurantDetailsPartial" model="Model"/>
+
+
+@{
+    foreach (var foodGroup in GetFoodInGroups(Model.Food))
+    {
+        <div class="borders-menu">
+            <div>
+                <div class="row d-flex justify-content-center p-1">
+                    <h3>@foodGroup.First().FoodGroup?.FoodGroupType</h3>
+                </div>
+                @{
+                    foreach (var food in foodGroup)
+                    {
+                        <div class="restaurantMenu d-flex flex-row flex-wrap align-items-center">
+                            <img class="image-radius" src="@food.Picture" alt="logo" width="260" height="175"/>
+                            <div class="d-flex flex-column flex-wrap p-3">
+                                <div class="p-3 restaurant_name menu-header">
+                                    @food.FoodName
+                                </div>
+                                <div class="p-3 menu-extra-text">@food.Description</div>
+                                <div class="p-3 menu-extra-text">@food.Cost!.CostWithVat€</div>
+                            </div>
+                            <div class="ml-auto">
+                                <div class=" container-card-button">
+                                    <div class="container-custom-btn">
+                                        <div class="quantity">
+                                            <button type="button" class="btn btn-default-order">
+                                                Add to card
+                                            </button>
+                                            <a class="quantity__minus" id="quantity__minus">
+                                                <span>-</span>
+                                            </a>
+                                            <input name="quantity" id="food.id" type="number" min="0" class="quantity__input"   value="@CounterCart"/>
+                                            <a class="quantity__plus" id="quantity__plus" onclick="">
+                                                <span>+</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <i class="fa fa-shopping-cart icon-card"></i>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                <hr class="hr-line-menu"/>
+            </div>
+        </div>
+    }
+}
+

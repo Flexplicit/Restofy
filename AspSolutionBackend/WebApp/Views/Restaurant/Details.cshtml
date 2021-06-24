@@ -1,0 +1,84 @@
+@using Domain.OrderModels
+@model BLL.App.DTO.OrderModels.Restaurant
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            FoodName
+            @* @Html.DisplayNameFor(model => nameof(Food.FoodName)) *@
+        </th>
+        
+        <th>
+            Food pic
+            @* @Html.DisplayNameFor(model => nameof(Food.Picture)) *@
+        </th>
+        <th>
+            Cost
+            @* @Html.DisplayNameFor(model => nameof(Food.Cost.CostWithVat)) *@
+        </th>
+        <th>
+            Group
+            @* @Html.DisplayNameFor(model => nameof(Food.FoodGroup.FoodGroupType)) *@
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model.RestaurantFood!)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoodName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost!.CostWithVat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoodGroup!.FoodGroupType)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    <h4>Restaurant</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

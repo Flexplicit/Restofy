@@ -1,0 +1,32 @@
+﻿<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="UserNotInRole" xml:space="preserve">
+        <value>Kasutaja ei ole rollis '{role}'</value>
+    </data>
+    <data name="UserAlreadyInRole" xml:space="preserve">
+        <value>Kasutaja on juba rollis '{role}'</value>
+    </data>
+    <data name="UserLockoutNotEnabled" xml:space="preserve">
+        <value>Kasutajalukustus pole võimalik antud kasutajal</value>
+    </data>
+    <data name="UserAlreadyHasPassword" xml:space="preserve">
+        <value>Kasutajal on juba parool olemas</value>
+    </data>
+    <data name="DuplicateRoleName" xml:space="preserve">
+        <value>Rolli nimetus '{role}' on juba olemas</value>
+    </data>
+    <data name="InvalidRoleName" xml:space="preserve">
+        <value>Roll '{role}' on kehtetu</value>
+    </data>
+</root>

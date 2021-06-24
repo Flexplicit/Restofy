@@ -1,0 +1,1398 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\TestProject\\TestProject.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj",
+        "projectName": "BLL.App.DTO",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App\\BLL.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App\\BLL.App.csproj",
+        "projectName": "BLL.App",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App\\BLL.App.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj",
+        "projectName": "BLL.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj",
+        "projectName": "Contracts.BLL.App",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj",
+        "projectName": "Contracts.BLL.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj",
+        "projectName": "Contracts.DAL.App",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj",
+        "projectName": "Contracts.DAL.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj",
+        "projectName": "Contracts.Domain.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj",
+        "projectName": "DAL.App.DTO",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\DAL.App.DTO.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj",
+        "projectName": "DAL.App.EF",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.App\\Contracts.DAL.App.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base.EF\\DAL.Base.EF.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base.EF\\DAL.Base.EF.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base.EF\\DAL.Base.EF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base.EF\\DAL.Base.EF.csproj",
+        "projectName": "DAL.Base.EF",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base.EF\\DAL.Base.EF.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base.EF\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base\\DAL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base\\DAL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base\\DAL.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base\\DAL.Base.csproj",
+        "projectName": "DAL.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base\\DAL.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj",
+        "projectName": "Domain.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.Domain.Base\\Contracts.Domain.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Extensions.Base\\Extensions.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Extensions.Base\\Extensions.Base.csproj",
+        "projectName": "Extensions.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Extensions.Base\\Extensions.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Extensions.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Helpers\\Helpers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Helpers\\Helpers.csproj",
+        "projectName": "Helpers",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Helpers\\Helpers.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Helpers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\PublicApiDTO.v1\\PublicApiDTO.v1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\PublicApiDTO.v1\\PublicApiDTO.v1.csproj",
+        "projectName": "PublicApiDTO.v1",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\PublicApiDTO.v1\\PublicApiDTO.v1.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\PublicApiDTO.v1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Domain.Base\\Domain.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources.Base\\Resources.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources.Base\\Resources.Base.csproj",
+        "projectName": "Resources.Base",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources.Base\\Resources.Base.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj",
+        "projectName": "Resources",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\TestProject\\TestProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\TestProject\\TestProject.csproj",
+        "projectName": "TestProject",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\TestProject\\TestProject.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\TestProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\WebApp\\WebApp.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\WebApp\\WebApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AngleSharp": {
+              "target": "Package",
+              "version": "[0.15.0, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\WebApp\\WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\WebApp\\WebApp.csproj",
+        "projectName": "WebApp",
+        "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\renes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App.DTO\\BLL.App.DTO.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App\\BLL.App.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.App\\BLL.App.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\BLL.Base\\BLL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.App\\Contracts.BLL.App.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\DAL.App.EF\\DAL.App.EF.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Extensions.Base\\Extensions.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Extensions.Base\\Extensions.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Helpers\\Helpers.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Helpers\\Helpers.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\PublicApiDTO.v1\\PublicApiDTO.v1.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\PublicApiDTO.v1\\PublicApiDTO.v1.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources.Base\\Resources.Base.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources.Base\\Resources.Base.csproj"
+              },
+              "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj": {
+                "projectPath": "C:\\Users\\renes\\Desktop\\Github\\Restofy\\AspSolutionBackend\\Resources\\Resources.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

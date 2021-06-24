@@ -1,0 +1,193 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>aspnet-WebApp-A8E10D7F-4D07-4E0F-A3B9-A1477662C732</UserSecretsId>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <!--        <NoWarn>$(NoWarn);1591</NoWarn>-->
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.3" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\FoodInGroup\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInGroup\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInGroup\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInGroup\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInGroup\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodGroup\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodGroup\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodGroup\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodGroup\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodGroup\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantFoodGroup\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantFoodGroup\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantFoodGroup\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantFoodGroup\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantFoodGroup\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Cost\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Cost\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Cost\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Cost\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Cost\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Food\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Food\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Food\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Food\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Food\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Restaurant\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Restaurant\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Restaurant\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Restaurant\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Restaurant\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantUser\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantUser\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantUser\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantUser\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantUser\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\AccessDenied.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ConfirmEmail.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ExternalLogin.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ForgotPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Lockout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\LoginWith2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Email.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResendEmailConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Address\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Address\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Address\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Address\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Address\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantAddress\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantAddress\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantAddress\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantAddress\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantAddress\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\_CreateEdit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\_Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInOrder\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInOrder\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInOrder\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInOrder\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FoodInOrder\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditInfo\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditInfo\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditInfo\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditInfo\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditInfo\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditCard\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditCard\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditCard\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditCard\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CreditCard\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ContactType\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ContactType\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ContactType\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ContactType\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ContactType\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\BillLine\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\BillLine\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\BillLine\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\BillLine\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\BillLine\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Bill\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Bill\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Bill\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Bill\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Bill\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantSubscription\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantSubscription\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantSubscription\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantSubscription\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RestaurantSubscription\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BLL.App.DTO\BLL.App.DTO.csproj" />
+      <ProjectReference Include="..\BLL.App\BLL.App.csproj" />
+      <ProjectReference Include="..\BLL.Base\BLL.Base.csproj" />
+      <ProjectReference Include="..\Contracts.BLL.App\Contracts.BLL.App.csproj" />
+      <ProjectReference Include="..\Contracts.BLL.Base\Contracts.BLL.Base.csproj" />
+      <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
+      <ProjectReference Include="..\Extensions.Base\Extensions.Base.csproj" />
+      <ProjectReference Include="..\Helpers\Helpers.csproj" />
+      <ProjectReference Include="..\PublicApiDTO.v1\PublicApiDTO.v1.csproj" />
+      <ProjectReference Include="..\Resources.Base\Resources.Base.csproj" />
+      <ProjectReference Include="..\Resources\Resources.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Admin\Controllers" />
+      <Folder Include="Areas\Admin\ViewModels" />
+      <Folder Include="Areas\Admin\Views\Shared" />
+      <Folder Include="wwwroot\lib\fort-awesome" />
+      <Folder Include="wwwroot\lib\font-awesome\dist" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Food\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Food\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Food\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Food\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Food\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\FoodGroup\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\FoodGroup\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\FoodGroup\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\FoodGroup\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\FoodGroup\Index.cshtml" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="UseLocalAccount" xml:space="preserve">
+        <value>Logi sisse kohaliku kasutajaga.</value>
+    </data>
+    <data name="LogIn" xml:space="preserve">
+        <value>Logi sisse</value>
+    </data>
+    <data name="RememberMe" xml:space="preserve">
+        <value>Maleta mind</value>
+    </data>
+    <data name="ForgotYourPassword" xml:space="preserve">
+        <value>Parool ununes?</value>
+    </data>
+    <data name="RegisterAsANewUser" xml:space="preserve">
+        <value>Registreeri uus kasutaja</value>
+    </data>
+    <data name="ResendEmailConfirmation" xml:space="preserve">
+        <value>Saada uuesti emailikinnitus</value>
+    </data>
+</root>
