@@ -27,6 +27,7 @@ using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using WebApp.Areas.IdentityErrors;
 using WebApp.Helpers;
+#pragma warning disable 4014
 
 #pragma warning disable 1591
 
@@ -133,10 +134,10 @@ namespace WebApp
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public async void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
             IApiVersionDescriptionProvider apiVersionDescriptionProvider)
         {
-            await SetupAppData(app, Configuration);
+            SetupAppData(app, Configuration);
 
             if (env.IsDevelopment())
             {
@@ -203,14 +204,14 @@ namespace WebApp
 
                 if (configuration.GetValue<bool>("AppData:DropDatabase"))
                 {
-                    Console.Write("Drop database");
+                    Console.Write(@"Drop database");
                     DataInit.DropDatabase(ctx);
                     Console.WriteLine(@" - done");
                 }
 
                 if (configuration.GetValue<bool>("AppData:Migrate"))
                 {
-                    Console.Write("Migrate database");
+                    Console.Write(@"Migrate database");
                     DataInit.MigrateDatabase(ctx);
                     Console.WriteLine(@" - done");
                 }
@@ -219,14 +220,14 @@ namespace WebApp
                 {
                     using var userManager = serviceScope.ServiceProvider.GetService<UserManager<AppUser>>();
                     using var roleManager = serviceScope.ServiceProvider.GetService<RoleManager<AppRole>>();
-                    Console.Write("Seeding database");
+                    Console.WriteLine(@"Seeding identity database");
                     if (userManager != null && roleManager != null)
                     {
                         DataInit.SeedIdentity(userManager, roleManager, configuration);
                     }
                     else
                     {
-                        Console.Write("No User manager or role manager!");
+                        Console.Write(@"No User manager or role manager!");
                     }
 
                     Console.WriteLine(@" - done");
@@ -235,7 +236,7 @@ namespace WebApp
 
                 if (configuration.GetValue<bool>("AppData:SeedData"))
                 {
-                    Console.Write("Seed database");
+                    Console.WriteLine(@"Seed app data database");
                     await DataInit.SeedAppTestData(ctx);
                     Console.WriteLine(@" - done");
                 }

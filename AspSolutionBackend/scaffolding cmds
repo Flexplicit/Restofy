@@ -18,6 +18,10 @@ dotnet aspnet-codegenerator controller -name FoodInOrderController       -action
 dotnet aspnet-codegenerator controller -name PaymentTypeController       -actions -m  PaymentType       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 dotnet aspnet-codegenerator controller -name BillController       -actions -m  Bill       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 dotnet aspnet-codegenerator controller -name BillLineController       -actions -m  BillLine       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+
+
+dotnet aspnet-codegenerator controller -name LangStringController       -actions -m  LangString       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name TranslationController       -actions -m  Translation       -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 ==========Controllers==========
 
 ==========Identity==========

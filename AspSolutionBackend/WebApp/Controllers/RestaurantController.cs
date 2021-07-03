@@ -125,11 +125,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            if (restaurant.AppUserId != User.GetUserId()!.Value)
-            {
-                return Unauthorized();
-            }
+            // TODO: quick check if User is owner of restaurant.
 
             if (!ModelState.IsValid || !await _bll.Restaurants.ExistsAsync(id, User.GetUserId()!.Value))
             {

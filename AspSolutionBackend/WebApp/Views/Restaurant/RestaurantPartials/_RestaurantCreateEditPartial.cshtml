@@ -2,9 +2,10 @@
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <div class="form-group">
-    <label asp-for="Name" class="control-label"></label>
-    <input asp-for="Name" class="form-control"/>
-    <span asp-validation-for="Name" class="text-danger"></span>
+
+    <label asp-for="NameLang" class="control-label"></label>
+    <input asp-for="NameLang" class="form-control"/>
+    <span asp-validation-for="NameLang" class="text-danger"></span>
 </div>
 <div class="form-group">
     <label asp-for="Picture" class="control-label"></label>
@@ -12,15 +13,22 @@
     <span asp-validation-for="Picture" class="text-danger"></span>
 </div>
 <div class="form-group">
-    <label asp-for="Description" class="control-label"></label>
-    <input asp-for="Description" class="form-control"/>
-    <span asp-validation-for="Description" class="text-danger"></span>
+    <label asp-for="RestaurantAddress" class="control-label"></label>
+    <input asp-for="RestaurantAddress" class="form-control"/>
+    <span asp-validation-for="RestaurantAddress" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="DescriptionLang" class="control-label"></label>
+    <input asp-for="DescriptionLang" class="form-control"/>
+    <span asp-validation-for="DescriptionLang" class="text-danger"></span>
 </div>
 <div class="form-group t-1">
     <div class="input-group shadow">
-        <span class="input-group-text px-3 text-muted"><i class="fas fa-image fa-lg"></i></span>
-        <input type="file" id="file" name="img[]" class="d-none" />
-        <input type="text" id="imagename" class="form-control form-control" placeholder="Upload Image" />
+        <span class="input-group-text px-3 text-muted">
+            <i class="fas fa-image fa-lg"></i>
+        </span>
+        <input type="file" id="file" name="img[]" class="d-none"/>
+        <input type="text" id="imagename" class="form-control form-control" placeholder="Upload Image"/>
         <button class="browse btn btn-primary px-4" type="button">
             <i class="fas fa-image"></i>
             Browse

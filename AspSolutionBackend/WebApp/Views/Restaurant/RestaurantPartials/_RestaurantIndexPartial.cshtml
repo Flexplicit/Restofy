@@ -8,15 +8,15 @@
                 <div class="d-flex flex-column">
                     <div class="borders">
                         <img class="restaurantImage text-in-hover" src="@res.Picture" alt="logo" width="300" height="200"/>
-                        <div class="p-2 restaurant_name text-in-hover inner-margin-restaurant-text">@res.Name</div>
-                        <div class="p-2 text-in-hover inner-margin-restaurant-text">@res.Description</div>
+                        <div class="p-2 restaurant_name text-in-hover inner-margin-restaurant-text">@res.NameLang</div>
+                        <div class="p-2 text-in-hover inner-margin-restaurant-text">@res.DescriptionLang</div>
                         <div class="p-2 text-in-hover inner-margin-restaurant-text">@res.RestaurantAddress</div>
                         @if (Model.IsRestaurantOwnerView)
                         {
                             <div class="p-2 inner-margin-restaurant-text">
-                                <a asp-action="Edit">Edit</a>&nbsp;|
-                                <a asp-action="Delete">Delete</a>&nbsp;|
-                                <a asp-action="RestaurantMenu">Menu</a>&nbsp;|
+                                <a asp-route-id="@res.Id" asp-action="Edit">Edit</a>&nbsp;|
+                                <a asp-route-id="@res.Id" asp-action="Delete">Delete</a>&nbsp;|
+                                <a asp-route-restaurantId="@res.Id" asp-action="RestaurantMenu">Menu</a>&nbsp;|
                                 <a>Orders</a>
                             </div>
                         }

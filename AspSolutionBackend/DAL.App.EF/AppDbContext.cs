@@ -1,8 +1,10 @@
 ﻿using System;
+using Domain.Base;
 using Domain.Identity;
 using Domain.OrderModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace DAL.APP.EF
 {
@@ -27,11 +29,19 @@ namespace DAL.APP.EF
         public virtual DbSet<Restaurant> Restaurants { get; set; } = null!;
         public virtual DbSet<RestaurantSubscription> RestaurantSubscriptions { get; set; } = null!;
         public virtual DbSet<Subscription> Subscriptions { get; set; } = null!;
+        
+        
+        public virtual DbSet<LangString> LangStrings { get; set; } = null!;
+        public virtual DbSet<Translation> Translations { get; set; } = null!;
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+
+            //TODO: should be in base dbContext
+            modelBuilder.Entity<Translation>().HasKey(key => new {key.Culture, key.LangStringId});
 
             modelBuilder.Entity<BillLine>(entity =>
             {
@@ -85,18 +95,12 @@ namespace DAL.APP.EF
                     .IsRequired()
                     .OnDelete(DeleteBehavior.Cascade); // setnull?
 
-                // entity.HasOne<FoodGroup>(g => g.FoodGroup!)
-                //     .WithMany(food => food.Foods)
-                //     .HasForeignKey(fg => fg.FoodGroupId)
-                //     .OnDelete(DeleteBehavior.Restrict);
-                // .OnDelete(DeleteBehavior.Cascade); // set null
-
 
                 entity.HasOne<Restaurant>(g => g.Restaurant!)
                     .WithMany(food => food.RestaurantFood)
                     .HasForeignKey(fg => fg.RestaurantId)
                     .IsRequired()
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.Restrict);
             });
             modelBuilder.Entity<FoodInOrder>(entity =>
             {
@@ -143,7 +147,7 @@ namespace DAL.APP.EF
                 entity.HasMany(d => d.RestaurantFood)
                     .WithOne(p => p!.Restaurant!)
                     .HasForeignKey(d => d.RestaurantId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasMany(d => d.Contacts)
                     .WithOne(p => p!.Restaurant!)

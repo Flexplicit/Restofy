@@ -26,11 +26,6 @@ namespace DAL.APP.EF.Repositories
         }
 
 
-        public override DalAppDTO.Restaurant Remove(DalAppDTO.Restaurant entity, Guid userId)
-        {
-            return base.Remove(entity, userId);
-        }
-
         public override async Task<DalAppDTO.Restaurant?> FirstOrDefaultAsync(Guid id, Guid userId = default,
             bool noTracking = true)
         {
@@ -38,6 +33,8 @@ namespace DAL.APP.EF.Repositories
             var domainEntity = await query
                 .Include(x => x.AppUser)
                 .Include(x => x.RestaurantSubscriptions)
+                .Include(x => x.NameLang)
+                .ThenInclude(x => x!.Translations)
                 .Where(entity => entity.Id == id)
                 .FirstOrDefaultAsync();
             var dalEntity = Mapper.Map(domainEntity);
@@ -50,6 +47,10 @@ namespace DAL.APP.EF.Repositories
             var query = CreateQuery(userId, noTracking);
             return (await query
                 .Include(x => x!.RestaurantSubscriptions)
+                .Include(x => x.NameLang)
+                .ThenInclude(x => x!.Translations)
+                .Include(x=>x.DescriptionLang)
+                .ThenInclude(x=>x!.Translations)
                 .Select(x => Mapper.Map(x))
                 .ToListAsync())!;
         }
@@ -78,10 +79,26 @@ namespace DAL.APP.EF.Repositories
                 (await query
                     .Include(x => x.AppUser)
                     .Include(x => x.RestaurantSubscriptions)
+                    .Include(x => x.NameLang)
+                    .ThenInclude(x => x!.Translations)
                     .Where(entity => entity.AppUserId == userId)
                     .Select(x => Mapper.Map(x))
                     .ToListAsync())!;
         }
+
+
+        public override DalAppDTO.Restaurant Update(DalAppDTO.Restaurant entity)
+        {
+            var prevEntity = RepoDbSet
+                .Include(x => x.NameLang)
+                .ThenInclude(x => x!.Translations)
+                .FirstOrDefault(ent=> ent.Id == entity.Id);
+            prevEntity!.NameLang!.SetTranslation(entity.NameLang);
+            var updatedEntity = RepoDbSet.Update(prevEntity!).Entity;
+            var dalEntity = Mapper.Map(updatedEntity);
+            return dalEntity!;
+        }
+
 
         public async Task<DalAppDTO.Restaurant?> GetRestaurantWithOrderData(Guid id, Guid userId = default,
             bool noTracking = true)

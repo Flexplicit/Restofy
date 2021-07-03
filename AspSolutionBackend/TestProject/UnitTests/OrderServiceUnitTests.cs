@@ -290,80 +290,80 @@ namespace TestProject.UnitTests
 
         private async Task SeedMainFlowData()
         {
-            _ctx.Users.Add(new AppUser
-            {
-                FirstName = "normalUserFirst",
-                LastName = "normalUserLast",
-                Email = "test@gmail.com",
-                PasswordHash = "MostSecurePasswordEver"
-            });
-            var restaurantOwner = new AppUser
-            {
-                FirstName = "RestaurantOwner",
-                LastName = "RestaurantOwner",
-                Email = "RestaurantOwner@gmail.com",
-                PasswordHash = "MostSecurePasswordEver"
-            };
-
-            var restaurantFood = new List<Food>()
-            {
-                new()
-                {
-                    FoodName = "someRandomBurger0",
-                    Picture = "someJpg",
-                    FoodGroup = new FoodGroup()
-                    {
-                        FoodGroupType = FoodGroupType.Burger
-                    },
-                    Cost = new Cost()
-                    {
-                        CostWithoutVat = 10,
-                        CostWithVat = 20,
-                        Vat = 20
-                    }
-                },
-                new()
-                {
-                    FoodName = "someRandomBurger1",
-                    Picture = "jpgSome",
-                    FoodGroup = new FoodGroup()
-                    {
-                        FoodGroupType = FoodGroupType.Sushi
-                    },
-                    Cost = new Cost()
-                    {
-                        CostWithoutVat = 20,
-                        CostWithVat = 40,
-                        Vat = 20
-                    }
-                }
-            };
-            var restaurant = new Restaurant
-            {
-                Name = "TestRestaurant0",
-                Description = "its description",
-                RestaurantAddress = "TestAddress",
-                RestaurantFood = restaurantFood,
-                AppUser = restaurantOwner
-            };
-            _ctx.Restaurants.Add(restaurant);
-            _ctx.FoodInOrders.Add(new FoodInOrder()
-            {
-                Id = Guid.Parse("994d4378-0eca-4de8-915d-22832057a5b1"),
-                Amount = 2,
-                Food = restaurantFood[0],
-            });
-            _ctx.FoodInOrders.Add(new FoodInOrder()
-            {
-                Id = Guid.Parse("8cc328cb-aa88-4204-a779-8ba7ddd651ba"),
-                Amount = 3,
-                Food = restaurantFood[1]
-            });
-            _ctx.PaymentTypes.Add(new PaymentType()
-            {
-                Type = EPaymentType.Cash
-            });
-            await _ctx.SaveChangesAsync();
+            // _ctx.Users.Add(new AppUser
+            // {
+            //     FirstName = "normalUserFirst",
+            //     LastName = "normalUserLast",
+            //     Email = "test@gmail.com",
+            //     PasswordHash = "MostSecurePasswordEver"
+            // });
+            // var restaurantOwner = new AppUser
+            // {
+            //     FirstName = "RestaurantOwner",
+            //     LastName = "RestaurantOwner",
+            //     Email = "RestaurantOwner@gmail.com",
+            //     PasswordHash = "MostSecurePasswordEver"
+            // };
+            //
+            // var restaurantFood = new List<Food>()
+            // {
+            //     new()
+            //     {
+            //         FoodName = "someRandomBurger0",
+            //         Picture = "someJpg",
+            //         FoodGroup = new FoodGroup()
+            //         {
+            //             FoodGroupType = FoodGroupType.Burger
+            //         },
+            //         Cost = new Cost()
+            //         {
+            //             CostWithoutVat = 10,
+            //             CostWithVat = 20,
+            //             Vat = 20
+            //         }
+            //     },
+            //     new()
+            //     {
+            //         FoodName = "someRandomBurger1",
+            //         Picture = "jpgSome",
+            //         FoodGroup = new FoodGroup()
+            //         {
+            //             FoodGroupType = FoodGroupType.Sushi
+            //         },
+            //         Cost = new Cost()
+            //         {
+            //             CostWithoutVat = 20,
+            //             CostWithVat = 40,
+            //             Vat = 20
+            //         }
+            //     }
+            // };
+            // var restaurant = new Restaurant
+            // {
+            //     Name = "TestRestaurant0",
+            //     Description = "its description",
+            //     RestaurantAddress = "TestAddress",
+            //     RestaurantFood = restaurantFood,
+            //     AppUser = restaurantOwner
+            // };
+            // _ctx.Restaurants.Add(restaurant);
+            // _ctx.FoodInOrders.Add(new FoodInOrder()
+            // {
+            //     Id = Guid.Parse("994d4378-0eca-4de8-915d-22832057a5b1"),
+            //     Amount = 2,
+            //     Food = restaurantFood[0],
+            // });
+            // _ctx.FoodInOrders.Add(new FoodInOrder()
+            // {
+            //     Id = Guid.Parse("8cc328cb-aa88-4204-a779-8ba7ddd651ba"),
+            //     Amount = 3,
+            //     Food = restaurantFood[1]
+            // });
+            // _ctx.PaymentTypes.Add(new PaymentType()
+            // {
+            //     Type = EPaymentType.Cash
+            // });
+            // await _ctx.SaveChangesAsync();
         }
     }
 }

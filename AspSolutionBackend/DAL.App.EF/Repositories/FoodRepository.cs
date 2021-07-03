@@ -28,8 +28,17 @@ namespace DAL.APP.EF.Repositories
                 .Include(x => x.Cost)
                 .Include(x => x.FoodGroup)
                 .Include(x => x.Restaurant)
+                .Include(x=>x.FoodNameLang)
+                .ThenInclude(x=>x!.Translations)
                 .Select(x => Mapper.Map(x))
                 .ToListAsync())!;
+        }
+
+
+        public override DalAppDTO.Food Update(DalAppDTO.Food entity)
+        {
+            
+            return base.Update(entity);
         }
 
         public override async Task<DalAppDTO.Food?> FirstOrDefaultAsync(Guid id, Guid userId = default,
@@ -41,6 +50,8 @@ namespace DAL.APP.EF.Repositories
                 .Include(x => x.FoodGroup)
                 .Include(x => x.Restaurant)
                 .Include(x => x.FoodInOrders)
+                .Include(x=>x.FoodNameLang)
+                .ThenInclude(x=>x!.Translations)
                 .Where(entity => entity.Id.Equals(id))
                 .AsNoTracking()
                 .FirstOrDefaultAsync());

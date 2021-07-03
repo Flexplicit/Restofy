@@ -7,6 +7,9 @@ namespace DAL.App.DTO.MappingProfiles
     {
         public AutoMapperProfile()
         {
+            
+            
+            
             CreateMap<DAL.App.DTO.Identity.AppRole, Domain.Identity.AppRole>().ReverseMap();
             CreateMap<DAL.App.DTO.Identity.AppUser, Domain.Identity.AppUser>().ReverseMap();
             CreateMap<DAL.App.DTO.OrderModels.Bill, Domain.OrderModels.Bill>().ReverseMap();

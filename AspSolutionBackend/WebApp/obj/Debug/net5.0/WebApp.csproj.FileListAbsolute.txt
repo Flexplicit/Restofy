@@ -552,3 +552,13 @@ C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0
 C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\WebApp.xml
 C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\WebApp.pdb
 C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\WebApp.genruntimeconfig.cache
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\LangString\Create.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\LangString\Delete.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\LangString\Details.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\LangString\Edit.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\LangString\Index.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\Translation\Create.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\Translation\Delete.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\Translation\Details.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\Translation\Edit.cshtml.g.cs
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\WebApp\obj\Debug\net5.0\Razor\Views\Translation\Index.cshtml.g.cs

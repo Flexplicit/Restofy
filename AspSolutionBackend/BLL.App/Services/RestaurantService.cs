@@ -39,11 +39,13 @@ namespace BLL.App.Services
         // Remove all restaurants that dont have active subscription
         public new async Task<IEnumerable<Restaurant>> GetAllAsync(Guid userId, bool noTracking)
         {
-            var repoRes = (await ServiceRepository.GetAllAsync(userId))
-                .Select(x => AddSubscriptionData(Mapper.Map(x)))!.ToList();
-
-            repoRes.RemoveAll(x => !x!.IsValidSubscription);
-            return repoRes!;
+            return (await ServiceRepository.GetAllAsync(userId)).Select(x => Mapper.Map(x))!;
+            //TODO: CHANGE THIS 
+            // var repoRes = (await ServiceRepository.GetAllAsync(userId))
+            //     .Select(x => AddSubscriptionData(Mapper.Map(x)))!.ToList();
+            //
+            // repoRes.RemoveAll(x => !x!.IsValidSubscription);
+            // return repoRes!;
         }
 
 

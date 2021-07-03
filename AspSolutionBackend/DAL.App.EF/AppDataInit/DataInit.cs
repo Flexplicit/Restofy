@@ -22,7 +22,7 @@ namespace DAL.APP.EF.AppDataInit
         {
             context.Database.Migrate();
         }
-        
+
         private static IEnumerable<TEnum> GetUniqueEnumList<TEnum>(IEnumerable<TEnum> currentEnums)
         {
             return Enum
@@ -88,7 +88,7 @@ namespace DAL.APP.EF.AppDataInit
 
             var freeSubscription = context.Subscriptions.First(x => x.SubscriptionType == ESubscriptionType.Free);
             var burgerGroupType = context.FoodGroups.First(x => x.FoodGroupType == FoodGroupType.Burger);
-            
+
             var restaurantSubscription = new RestaurantSubscription()
             {
                 ActiveSince = DateTime.Now,
@@ -101,7 +101,7 @@ namespace DAL.APP.EF.AppDataInit
             user.Restaurants = new List<Restaurant>();
             var restaurant = new Restaurant
             {
-                AppUser = user, Name = "McDonalds", Description = "Fast food", RestaurantAddress = "Viimsi tee 5",
+                AppUser = user, NameLang = "McDonalds", DescriptionLang = "Fast food", RestaurantAddress = "Viimsi tee 5",
                 Picture = "https://i.gyazo.com/75d282232432e445aa939cc28766a6ad.jpg",
                 RestaurantSubscriptions = new List<RestaurantSubscription>
                 {
@@ -114,7 +114,7 @@ namespace DAL.APP.EF.AppDataInit
             var food1 = new Food()
             {
                 Description = "Juicy burger",
-                FoodName = "Bic Mac",
+                FoodNameLang = "Bic Mac",
                 Picture = "https://i.gyazo.com/b71db332866f7c1bcee01d356bf339a8.png",
                 Restaurant = restaurant,
                 FoodGroup = burgerGroupType,
@@ -123,7 +123,7 @@ namespace DAL.APP.EF.AppDataInit
             var food2 = new Food()
             {
                 Description = "Cheesy burger",
-                FoodName = "Cheese burger",
+                FoodNameLang = "Cheese burger",
                 Picture = "https://i.gyazo.com/8d6af3463f29dfde358f36b2a2116475.jpg",
                 Restaurant = restaurant,
                 FoodGroup = burgerGroupType,
@@ -134,7 +134,7 @@ namespace DAL.APP.EF.AppDataInit
             await context.AddAsync(food1);
             await context.AddAsync(food2);
             await context.AddAsync(cost1);
-            await context.AddAsync(cost2); 
+            await context.AddAsync(cost2);
             context.Update(user);
             await context.SaveChangesAsync();
         }
@@ -169,7 +169,6 @@ namespace DAL.APP.EF.AppDataInit
 
             res = userManager.CreateAsync(user, cfg["Users:NormalUser:Pw"]).Result;
             IdentityErrorLogger(res);
-
         }
 
         public static bool IdentityErrorLogger(IdentityResult identityResult)
@@ -180,6 +179,7 @@ namespace DAL.APP.EF.AppDataInit
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"\nIdentity Error: {error.Code} - {error.Description}");
             }
+
             return true;
         }
     }

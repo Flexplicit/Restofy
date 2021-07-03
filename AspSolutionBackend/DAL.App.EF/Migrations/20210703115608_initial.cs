@@ -102,6 +102,17 @@ namespace DAL.APP.EF.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "LangStrings",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LangStrings", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PaymentTypes",
                 columns: table => new
                 {
@@ -235,28 +246,6 @@ namespace DAL.APP.EF.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Restaurants",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Picture = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    RestaurantAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    AppUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Restaurants", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Restaurants_AspNetUsers_AppUserId",
-                        column: x => x.AppUserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "CreditCards",
                 columns: table => new
                 {
@@ -277,6 +266,59 @@ namespace DAL.APP.EF.Migrations
                         name: "FK_CreditCards_CreditCardInfos_CreditCardInfoId",
                         column: x => x.CreditCardInfoId,
                         principalTable: "CreditCardInfos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Restaurants",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    NameLangId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DescriptionLangId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    Picture = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    RestaurantAddress = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    AppUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Restaurants", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Restaurants_AspNetUsers_AppUserId",
+                        column: x => x.AppUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Restaurants_LangStrings_DescriptionLangId",
+                        column: x => x.DescriptionLangId,
+                        principalTable: "LangStrings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Restaurants_LangStrings_NameLangId",
+                        column: x => x.NameLangId,
+                        principalTable: "LangStrings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Translations",
+                columns: table => new
+                {
+                    Culture = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
+                    LangStringId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Value = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Translations", x => new { x.Culture, x.LangStringId });
+                    table.ForeignKey(
+                        name: "FK_Translations_LangStrings_LangStringId",
+                        column: x => x.LangStringId,
+                        principalTable: "LangStrings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -322,7 +364,7 @@ namespace DAL.APP.EF.Migrations
                     RestaurantId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CostId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FoodGroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FoodName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    FoodNameLangId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
                     Picture = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
@@ -342,40 +384,17 @@ namespace DAL.APP.EF.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_Foods_LangStrings_FoodNameLangId",
+                        column: x => x.FoodNameLangId,
+                        principalTable: "LangStrings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Foods_Restaurants_RestaurantId",
                         column: x => x.RestaurantId,
                         principalTable: "Restaurants",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RestaurantSubscriptions",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SubscriptionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    RestaurantId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PaypalId = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
-                    ActiveSince = table.Column<DateTime>(type: "date", nullable: true),
-                    ActiveUntill = table.Column<DateTime>(type: "date", nullable: true),
-                    IsPaid = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RestaurantSubscriptions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_RestaurantSubscriptions_Restaurants_RestaurantId",
-                        column: x => x.RestaurantId,
-                        principalTable: "Restaurants",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RestaurantSubscriptions_Subscriptions_SubscriptionId",
-                        column: x => x.SubscriptionId,
-                        principalTable: "Subscriptions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -418,6 +437,35 @@ namespace DAL.APP.EF.Migrations
                         name: "FK_Orders_Restaurants_RestaurantId",
                         column: x => x.RestaurantId,
                         principalTable: "Restaurants",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RestaurantSubscriptions",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SubscriptionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    RestaurantId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PaypalId = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
+                    ActiveSince = table.Column<DateTime>(type: "date", nullable: true),
+                    ActiveUntill = table.Column<DateTime>(type: "date", nullable: true),
+                    IsPaid = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RestaurantSubscriptions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RestaurantSubscriptions_Restaurants_RestaurantId",
+                        column: x => x.RestaurantId,
+                        principalTable: "Restaurants",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_RestaurantSubscriptions_Subscriptions_SubscriptionId",
+                        column: x => x.SubscriptionId,
+                        principalTable: "Subscriptions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -586,6 +634,11 @@ namespace DAL.APP.EF.Migrations
                 column: "FoodGroupId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Foods_FoodNameLangId",
+                table: "Foods",
+                column: "FoodNameLangId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Foods_RestaurantId",
                 table: "Foods",
                 column: "RestaurantId");
@@ -616,6 +669,16 @@ namespace DAL.APP.EF.Migrations
                 column: "AppUserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Restaurants_DescriptionLangId",
+                table: "Restaurants",
+                column: "DescriptionLangId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Restaurants_NameLangId",
+                table: "Restaurants",
+                column: "NameLangId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RestaurantSubscriptions_RestaurantId",
                 table: "RestaurantSubscriptions",
                 column: "RestaurantId");
@@ -624,6 +687,11 @@ namespace DAL.APP.EF.Migrations
                 name: "IX_RestaurantSubscriptions_SubscriptionId",
                 table: "RestaurantSubscriptions",
                 column: "SubscriptionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Translations_LangStringId",
+                table: "Translations",
+                column: "LangStringId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -654,6 +722,9 @@ namespace DAL.APP.EF.Migrations
 
             migrationBuilder.DropTable(
                 name: "RestaurantSubscriptions");
+
+            migrationBuilder.DropTable(
+                name: "Translations");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -693,6 +764,9 @@ namespace DAL.APP.EF.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "LangStrings");
         }
     }
 }

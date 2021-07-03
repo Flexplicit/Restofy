@@ -9,15 +9,18 @@ namespace Domain.OrderModels
 {
     public partial class Food : DomainEntityId
     {
-        // [Key] public Guid FoodId { get; set; }
-
         public Guid RestaurantId { get; set; }
 
         public Guid CostId { get; set; }
 
         public Guid FoodGroupId { get; set; }
 
-        [Required] [StringLength(20)] public string FoodName { get; set; } = null!;
+        // [Required] [StringLength(20)] public string FoodName { get; set; } = null!;
+        
+        public LangString? FoodNameLang { get; set; }
+        
+        public Guid FoodNameLangId { get; set; }
+        
         [StringLength(40)] public string? Description { get; set; }
         [Required] [StringLength(255)] public string Picture { get; set; } = null!;
 

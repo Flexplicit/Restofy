@@ -111,8 +111,11 @@ namespace DAL.Base.EF.Repositories
 
         public virtual TDalDTOEntity Update(TDalDTOEntity entity)
         {
-            
-            return Mapper.Map(RepoDbSet.Update(Mapper.Map(entity)!).Entity)!;
+            var domainEntity = Mapper.Map(entity);
+            var updatedEntity = RepoDbSet.Update(domainEntity!).Entity;
+            var dalEntity = Mapper.Map(updatedEntity);
+            return dalEntity!;
+            // return Mapper.Map(RepoDbSet.Update(Mapper.Map(entity)!).Entity)!;
         }
 
 

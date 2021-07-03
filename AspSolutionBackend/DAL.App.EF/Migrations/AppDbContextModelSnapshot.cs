@@ -19,6 +19,38 @@ namespace DAL.APP.EF.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Domain.Base.LangString", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LangStrings");
+                });
+
+            modelBuilder.Entity("Domain.Base.Translation", b =>
+                {
+                    b.Property<string>("Culture")
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<Guid>("LangStringId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasMaxLength(1024)
+                        .HasColumnType("nvarchar(1024)");
+
+                    b.HasKey("Culture", "LangStringId");
+
+                    b.HasIndex("LangStringId");
+
+                    b.ToTable("Translations");
+                });
+
             modelBuilder.Entity("Domain.Identity.AppRole", b =>
                 {
                     b.Property<Guid>("Id")
@@ -311,10 +343,8 @@ namespace DAL.APP.EF.Migrations
                     b.Property<Guid>("FoodGroupId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("FoodName")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                    b.Property<Guid>("FoodNameLangId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Picture")
                         .IsRequired()
@@ -329,6 +359,8 @@ namespace DAL.APP.EF.Migrations
                     b.HasIndex("CostId");
 
                     b.HasIndex("FoodGroupId");
+
+                    b.HasIndex("FoodNameLangId");
 
                     b.HasIndex("RestaurantId");
 
@@ -443,14 +475,11 @@ namespace DAL.APP.EF.Migrations
                     b.Property<Guid>("AppUserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<Guid?>("DescriptionLangId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.Property<Guid>("NameLangId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Picture")
                         .HasMaxLength(255)
@@ -464,6 +493,10 @@ namespace DAL.APP.EF.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("DescriptionLangId");
+
+                    b.HasIndex("NameLangId");
 
                     b.ToTable("Restaurants");
                 });
@@ -630,6 +663,17 @@ namespace DAL.APP.EF.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Domain.Base.Translation", b =>
+                {
+                    b.HasOne("Domain.Base.LangString", "LangString")
+                        .WithMany("Translations")
+                        .HasForeignKey("LangStringId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LangString");
+                });
+
             modelBuilder.Entity("Domain.OrderModels.Bill", b =>
                 {
                     b.HasOne("Domain.OrderModels.Order", "Order")
@@ -708,15 +752,23 @@ namespace DAL.APP.EF.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.Base.LangString", "FoodNameLang")
+                        .WithMany()
+                        .HasForeignKey("FoodNameLangId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.OrderModels.Restaurant", "Restaurant")
                         .WithMany("RestaurantFood")
                         .HasForeignKey("RestaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Cost");
 
                     b.Navigation("FoodGroup");
+
+                    b.Navigation("FoodNameLang");
 
                     b.Navigation("Restaurant");
                 });
@@ -777,7 +829,21 @@ namespace DAL.APP.EF.Migrations
                         .HasForeignKey("AppUserId")
                         .IsRequired();
 
+                    b.HasOne("Domain.Base.LangString", "DescriptionLang")
+                        .WithMany()
+                        .HasForeignKey("DescriptionLangId");
+
+                    b.HasOne("Domain.Base.LangString", "NameLang")
+                        .WithMany()
+                        .HasForeignKey("NameLangId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("AppUser");
+
+                    b.Navigation("DescriptionLang");
+
+                    b.Navigation("NameLang");
                 });
 
             modelBuilder.Entity("Domain.OrderModels.RestaurantSubscription", b =>
@@ -848,6 +914,11 @@ namespace DAL.APP.EF.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Base.LangString", b =>
+                {
+                    b.Navigation("Translations");
                 });
 
             modelBuilder.Entity("Domain.Identity.AppUser", b =>

@@ -15,9 +15,9 @@ namespace PublicApiDTO.v1.v1.Mappers
             var bllRestaurant = new BllAppDTO.Restaurant()
             {
                 Id = restaurant.Id,
-                Name = restaurant.Name,
+                NameLang = restaurant.Name,
                 RestaurantAddress = restaurant.RestaurantAddress,
-                Description = restaurant.Description,
+                DescriptionLang = restaurant.Description,
                 Picture = restaurant.Picture
             };
             return bllRestaurant;
@@ -27,9 +27,9 @@ namespace PublicApiDTO.v1.v1.Mappers
         {
             var bllRestaurant = new BllAppDTO.Restaurant()
             {
-                Name = restaurant.Name,
+                NameLang = restaurant.Name,
                 RestaurantAddress = restaurant.RestaurantAddress,
-                Description = restaurant.Description,
+                DescriptionLang = restaurant.Description,
                 Picture = restaurant.Picture
             };
             return bllRestaurant;
