@@ -16,7 +16,7 @@ namespace WebApp.ExternalApis
     public class GyazoApiService
     {
         // TODO: Make it more secure
-        private string BaseToken { get; set; } = "8309ce809a2f90bf37879153073b0c53f379c92e475cb580ae00df4eb5ae2df5";
+        private static string BaseToken => "8309ce809a2f90bf37879153073b0c53f379c92e475cb580ae00df4eb5ae2df5";
 
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace WebApp.ExternalApis
         /// </summary>
         /// <param name="base64EncodedImage"></param>
         /// <exception cref="Exception"></exception>
-        public async Task<GyazoResponse> UploadImageViaApi(string base64EncodedImage)
+        public static async Task<GyazoResponse> UploadImageViaApi(string base64EncodedImage)
         {
             const string baseUrl = @"https://upload.gyazo.com/api/upload";
             var returnResponse = new GyazoResponse();
@@ -85,6 +85,7 @@ namespace WebApp.ExternalApis
                     }
                 }
             }
+
             returnResponse.Message = "Problem with converting bytes into blob";
             return returnResponse;
         }

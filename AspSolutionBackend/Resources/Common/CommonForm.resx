@@ -30,4 +30,19 @@
     <data name="ComparisonMatch" xml:space="preserve">
         <value>The {0} and {1} do not match</value>
     </data>
+    <data name="UploadImage" xml:space="preserve">
+        <value>Upload Image</value>
+    </data>
+    <data name="Browse" xml:space="preserve">
+        <value>Browse</value>
+    </data>
+    <data name="Create" xml:space="preserve">
+        <value>Create</value>
+    </data>
+    <data name="Edit" xml:space="preserve">
+        <value>Edit</value>
+    </data>
+    <data name="Back" xml:space="preserve">
+        <value>Back</value>
+    </data>
 </root>

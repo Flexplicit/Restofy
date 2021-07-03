@@ -35,6 +35,8 @@ namespace DAL.APP.EF.Repositories
                 .Include(x => x.RestaurantSubscriptions)
                 .Include(x => x.NameLang)
                 .ThenInclude(x => x!.Translations)
+                .Include(x => x.DescriptionLang)
+                .ThenInclude(x => x!.Translations)
                 .Where(entity => entity.Id == id)
                 .FirstOrDefaultAsync();
             var dalEntity = Mapper.Map(domainEntity);
@@ -49,8 +51,8 @@ namespace DAL.APP.EF.Repositories
                 .Include(x => x!.RestaurantSubscriptions)
                 .Include(x => x.NameLang)
                 .ThenInclude(x => x!.Translations)
-                .Include(x=>x.DescriptionLang)
-                .ThenInclude(x=>x!.Translations)
+                .Include(x => x.DescriptionLang)
+                .ThenInclude(x => x!.Translations)
                 .Select(x => Mapper.Map(x))
                 .ToListAsync())!;
         }
@@ -66,6 +68,10 @@ namespace DAL.APP.EF.Repositories
                 .ThenInclude(x => x.Cost)
                 .Include(x => x.RestaurantFood)
                 .ThenInclude(x => x.FoodGroup)
+                .Include(x => x.NameLang)
+                .ThenInclude(x => x!.Translations)
+                .Include(x => x.DescriptionLang)
+                .ThenInclude(x => x!.Translations)
                 .Include(x => x.Contacts)
                 .Include(x => x.RestaurantSubscriptions)
                 .FirstOrDefaultAsync(entity => entity.Id.Equals(id)));
@@ -81,6 +87,8 @@ namespace DAL.APP.EF.Repositories
                     .Include(x => x.RestaurantSubscriptions)
                     .Include(x => x.NameLang)
                     .ThenInclude(x => x!.Translations)
+                    .Include(x => x.DescriptionLang)
+                    .ThenInclude(x => x!.Translations)
                     .Where(entity => entity.AppUserId == userId)
                     .Select(x => Mapper.Map(x))
                     .ToListAsync())!;
@@ -92,8 +100,13 @@ namespace DAL.APP.EF.Repositories
             var prevEntity = RepoDbSet
                 .Include(x => x.NameLang)
                 .ThenInclude(x => x!.Translations)
-                .FirstOrDefault(ent=> ent.Id == entity.Id);
+                .Include(x => x.DescriptionLang)
+                .ThenInclude(x => x!.Translations)
+                .FirstOrDefault(ent => ent.Id == entity.Id);
+            
             prevEntity!.NameLang!.SetTranslation(entity.NameLang);
+            prevEntity.DescriptionLang?.SetTranslation(entity.DescriptionLang!);
+            
             var updatedEntity = RepoDbSet.Update(prevEntity!).Entity;
             var dalEntity = Mapper.Map(updatedEntity);
             return dalEntity!;
@@ -109,6 +122,8 @@ namespace DAL.APP.EF.Repositories
                 .Include(x => x.AppUser)
                 .Include(x => x.RestaurantOrder)
                 .ThenInclude(x => x.FoodInOrders)
+                .Include(x=>x.NameLang)
+                .ThenInclude(x=>x!.Translations)
                 .Where(x => x.AppUserId == userId && x.Id.Equals(id))
                 .FirstOrDefaultAsync());
         }

@@ -40,7 +40,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Index">@Resources.Views.Shared._Layout.Restaurants</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="MyRestaurants">My Restaurants</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="MyRestaurants">@Resources.Views.Shared._Layout.MyRestaurants</a>
                         </div>
                     </li>
 
@@ -52,8 +52,8 @@
                                 @Resources.Views.AdminPanel.AdminMenu.Users
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="nav-link text-dark" asp-controller="Translation" asp-action="Index">Translations </a>
-                                <a class="nav-link text-dark" asp-controller="LangString" asp-action="Index">LanguageStrings </a>
+                                <a class="nav-link text-dark" asp-controller="Translation" asp-action="Index">@Resources.Views.Shared._Layout.Translations </a>
+                                <a class="nav-link text-dark" asp-controller="LangString" asp-action="Index">@Resources.Views.Shared._Layout.LanguageStrings </a>
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Users" asp-action="Index">@Resources.Views.AdminPanel.AdminMenu.Users</a>
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Roles" asp-action="Index">@Resources.Views.AdminPanel.AdminMenu.Roles</a>
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Roles" asp-action="Index">@Resources.Views.AdminPanel.AdminMenu.UsersAndRoles</a>

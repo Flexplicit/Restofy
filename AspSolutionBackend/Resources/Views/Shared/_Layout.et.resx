@@ -30,4 +30,13 @@
     <data name="Restaurants" xml:space="preserve">
         <value>Restoranid</value>
     </data>
+    <data name="MyRestaurants" xml:space="preserve">
+        <value>Minu restoranid</value>
+    </data>
+    <data name="Translations" xml:space="preserve">
+        <value>Tõlked</value>
+    </data>
+    <data name="LanguageStrings" xml:space="preserve">
+        <value>Keele sõned</value>
+    </data>
 </root>

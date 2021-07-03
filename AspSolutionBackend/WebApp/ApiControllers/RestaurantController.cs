@@ -121,8 +121,7 @@ namespace WebApp.ApiControllers
                 return BadRequest("Non nullable fields are empty");
             }
 
-            var imageService = new GyazoApiService();
-            var imagePost = await imageService.UploadImageViaApi(restaurant.Picture!);
+            var imagePost = await GyazoApiService.UploadImageViaApi(restaurant.Picture!);
             if (!imagePost.IsSuccessfulResponse)
             {
                 return BadRequest(imagePost.Message);
@@ -155,8 +154,7 @@ namespace WebApp.ApiControllers
         public async Task<ActionResult<PublicDTO.v1.OrderModels.Restaurant>> PostRestaurant(
             [FromBody] PublicDTO.v1.OrderModels.RestaurantCreate restaurant)
         {
-            var imageService = new GyazoApiService();
-            var imagePost = await imageService.UploadImageViaApi(restaurant.Picture!);
+            var imagePost = await GyazoApiService.UploadImageViaApi(restaurant.Picture!);
             if (!imagePost.IsSuccessfulResponse)
             {
                 return BadRequest(imagePost.Message);

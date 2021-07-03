@@ -23,4 +23,19 @@
     <data name="ComparisonMatch" xml:space="preserve">
         <value>Väli {0} peab olema sama mis {1}</value>
     </data>
+    <data name="UploadImage" xml:space="preserve">
+        <value>Lae pilt</value>
+    </data>
+    <data name="Browse" xml:space="preserve">
+        <value>Kuva</value>
+    </data>
+    <data name="Create" xml:space="preserve">
+        <value>Loo</value>
+    </data>
+    <data name="Edit" xml:space="preserve">
+        <value>Muuda</value>
+    </data>
+    <data name="Back" xml:space="preserve">
+        <value>Tagasi</value>
+    </data>
 </root>

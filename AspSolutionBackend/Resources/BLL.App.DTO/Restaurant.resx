@@ -18,25 +18,19 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Languages" xml:space="preserve">
-        <value>Languages</value>
+    <data name="NameLang" xml:space="preserve">
+        <value>Name</value>
     </data>
-    <data name="Home" xml:space="preserve">
-        <value>Home</value>
+    <data name="Picture" xml:space="preserve">
+        <value>Picture</value>
     </data>
-    <data name="Privacy" xml:space="preserve">
-        <value>Privacy</value>
+    <data name="RestaurantAddress" xml:space="preserve">
+        <value>Address</value>
     </data>
-    <data name="Restaurants" xml:space="preserve">
+    <data name="DescriptionLang" xml:space="preserve">
+        <value>Description</value>
+    </data>
+    <data name="RestaurantIndex" xml:space="preserve">
         <value>Restaurant</value>
-    </data>
-    <data name="MyRestaurants" xml:space="preserve">
-        <value>My Restaurants</value>
-    </data>
-    <data name="Translations" xml:space="preserve">
-        <value>Translations</value>
-    </data>
-    <data name="LanguageStrings" xml:space="preserve">
-        <value>Laanguage Strings</value>
     </data>
 </root>

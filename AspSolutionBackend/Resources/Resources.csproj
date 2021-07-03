@@ -45,6 +45,10 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>LoginRelatedValidation.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="BLL.App.DTO\Restaurant.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Restaurant.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -97,6 +101,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>LoginRelatedValidation.resx</DependentUpon>
+      </Compile>
+      <Compile Update="BLL.App.DTO\Restaurant.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Restaurant.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

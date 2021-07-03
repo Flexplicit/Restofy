@@ -79,6 +79,24 @@ namespace Resources.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Laanguage Strings.
+        /// </summary>
+        public static string LanguageStrings {
+            get {
+                return ResourceManager.GetString("LanguageStrings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Restaurants.
+        /// </summary>
+        public static string MyRestaurants {
+            get {
+                return ResourceManager.GetString("MyRestaurants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Privacy.
         /// </summary>
         public static string Privacy {
@@ -93,6 +111,15 @@ namespace Resources.Views.Shared {
         public static string Restaurants {
             get {
                 return ResourceManager.GetString("Restaurants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translations.
+        /// </summary>
+        public static string Translations {
+            get {
+                return ResourceManager.GetString("Translations", resourceCulture);
             }
         }
     }

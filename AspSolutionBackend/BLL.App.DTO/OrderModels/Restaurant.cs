@@ -12,12 +12,19 @@ namespace BLL.App.DTO.OrderModels
 {
     public class Restaurant : DomainEntityId, IDomainAppUserId, IDomainAppUser<AppUser>
     {
-        [Required] [StringLength(30)] public string NameLang { get; set; } = null!;
+        [Required] 
+        [StringLength(30)]
+        [Display(ResourceType = typeof(Resources.BLL.App.DTO.Restaurant), Name = nameof(NameLang))]
+        public string NameLang { get; set; } = null!;
         public Guid NameLangId { get; set; }
-
+        
+        [Display(ResourceType = typeof(Resources.BLL.App.DTO.Restaurant), Name = nameof(Picture))]
         [StringLength(255)] public string? Picture { get; set; }
 
+        [Display(ResourceType = typeof(Resources.BLL.App.DTO.Restaurant), Name = nameof(RestaurantAddress))]
+
         [Required] [StringLength(30)] public string RestaurantAddress { get; set; } = null!;
+        [Display(ResourceType = typeof(Resources.BLL.App.DTO.Restaurant), Name = nameof(DescriptionLang))]
         [StringLength(100)] public string? DescriptionLang { get; set; }
         
         public Guid DescriptionLangId { get; set; }

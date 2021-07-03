@@ -113,7 +113,7 @@ namespace WebApp.ApiControllers
             }
 
             var imageService = new GyazoApiService();
-            var imagePost = await imageService.UploadImageViaApi(foodDTO.Picture!);
+            var imagePost = await GyazoApiService.UploadImageViaApi(foodDTO.Picture!);
             if (!imagePost.IsSuccessfulResponse) return BadRequest(imagePost.Message);
             foodDTO.Picture = imagePost.Url;
             // var costBll = await _bll.Cost.FirstOrDefaultAsync(foodDTO.CostId!.Value);
@@ -144,7 +144,7 @@ namespace WebApp.ApiControllers
             PublicDTO.v1.OrderModels.FoodCreate foodCreateDTO)
         {
             var imageService = new GyazoApiService();
-            var imagePost = await imageService.UploadImageViaApi(foodCreateDTO.Picture!);
+            var imagePost = await GyazoApiService.UploadImageViaApi(foodCreateDTO.Picture!);
             if (!imagePost.IsSuccessfulResponse) return BadRequest(imagePost.Message);
             foodCreateDTO.Picture = imagePost.Url;
 

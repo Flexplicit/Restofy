@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Resources.Common {
+namespace Resources.BLL.App.DTO {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Resources.Common {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class CommonForm {
+    public class Restaurant {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CommonForm() {
+        internal Restaurant() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources.Common {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.Common.CommonForm", typeof(CommonForm).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.BLL.App.DTO.Restaurant", typeof(Restaurant).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,83 +61,47 @@ namespace Resources.Common {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Back.
+        ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string Back {
+        public static string DescriptionLang {
             get {
-                return ResourceManager.GetString("Back", resourceCulture);
+                return ResourceManager.GetString("DescriptionLang", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Browse.
+        ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string Browse {
+        public static string NameLang {
             get {
-                return ResourceManager.GetString("Browse", resourceCulture);
+                return ResourceManager.GetString("NameLang", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The {0} and {1} do not match.
+        ///   Looks up a localized string similar to Picture.
         /// </summary>
-        public static string ComparisonMatch {
+        public static string Picture {
             get {
-                return ResourceManager.GetString("ComparisonMatch", resourceCulture);
+                return ResourceManager.GetString("Picture", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create.
+        ///   Looks up a localized string similar to Address.
         /// </summary>
-        public static string Create {
+        public static string RestaurantAddress {
             get {
-                return ResourceManager.GetString("Create", resourceCulture);
+                return ResourceManager.GetString("RestaurantAddress", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit.
+        ///   Looks up a localized string similar to Restaurant.
         /// </summary>
-        public static string Edit {
+        public static string RestaurantIndex {
             get {
-                return ResourceManager.GetString("Edit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The {0} must be at least {2} and at max {1} characters long..
-        /// </summary>
-        public static string FieldLength {
-            get {
-                return ResourceManager.GetString("FieldLength", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The {0} field is not a valid e-mail address.
-        /// </summary>
-        public static string RequiredEmailValidation {
-            get {
-                return ResourceManager.GetString("RequiredEmailValidation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Field {0} is required.
-        /// </summary>
-        public static string RequiredFieldForm {
-            get {
-                return ResourceManager.GetString("RequiredFieldForm", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Upload Image.
-        /// </summary>
-        public static string UploadImage {
-            get {
-                return ResourceManager.GetString("UploadImage", resourceCulture);
+                return ResourceManager.GetString("RestaurantIndex", resourceCulture);
             }
         }
     }

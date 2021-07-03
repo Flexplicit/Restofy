@@ -70,3 +70,5 @@ C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\Resources\obj\Debug\net
 C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\Resources\obj\Debug\net5.0\Resources.dll
 C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\Resources\obj\Debug\net5.0\ref\Resources.dll
 C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\Resources\obj\Debug\net5.0\Resources.pdb
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\Resources\obj\Debug\net5.0\Resources.BLL.App.DTO.Restaurant.resources
+C:\Users\renes\Desktop\Github\Restofy\AspSolutionBackend\Resources\obj\Debug\net5.0\Resources.BLL.App.DTO.Restaurant.et.resources
