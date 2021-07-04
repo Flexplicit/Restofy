@@ -17,7 +17,7 @@ const MyRestaurantColumns = (props: { restaurant: IRestaurant }) => {
                 </dd>
                 <dt className="col-sm-2">Name</dt>
                 <dd className="col-sm-10">
-                    {props.restaurant.name}
+                    {props.restaurant.nameLang}
                 </dd>
                 <dt className="col-sm-2">SalesCount</dt>
                 <dd className="col-sm-10">
@@ -29,7 +29,7 @@ const MyRestaurantColumns = (props: { restaurant: IRestaurant }) => {
                 </dd>
                 <dt className="col-sm-2">Description</dt>
                 <dd className="col-sm-10">
-                    {props.restaurant.description}
+                    {props.restaurant.descriptionLang}
                 </dd>
             </dl>
         </div>
@@ -40,7 +40,7 @@ const MyRestaurantColumns = (props: { restaurant: IRestaurant }) => {
 
 const MyRestaurantDelete = () => {
     const appState = useContext(AppContext)
-    const [restaurantState, setRestaurantState] = useState({ id: "", name: "", description: "", restaurantAddress: "", picture: "" } as IRestaurant)
+    const [restaurantState, setRestaurantState] = useState({} as IRestaurant)
     const [errorMessageState, setErrorMessageState] = useState([] as string[])
     const { id } = useParams<{ id: string }>();
     const history = useHistory();

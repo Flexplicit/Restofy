@@ -9,9 +9,9 @@ const RestaurantDetails = (props: { restaurant: IRestaurant, contacts: IContactV
                 <img className="image-radius" src={props.restaurant.picture} alt="logo" width="325" height="230" />
                 <div className="d-flex flex-column flex-wrap p-3">
                     <div className="p-3 restaurant_name restaurant-header">
-                        {props.restaurant.name}
+                        {props.restaurant.nameLang}
                     </div>
-                    <div className="p-3 restaurant-extra-text">{props.restaurant.description}</div>
+                    <div className="p-3 restaurant-extra-text">{props.restaurant.descriptionLang}</div>
                     <div className="p-3 restaurant-extra-text">
                         {props.restaurant.restaurantAddress}
                     </div>

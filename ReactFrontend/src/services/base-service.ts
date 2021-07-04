@@ -1,10 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import { ApiBaseUrl } from '../configurations'
 import { IFetchResponse } from '../types/IFetchResponse'
-/* eslint-disable */ // this thing is making me crazy
+/* eslint-disable */ 
 
 export abstract class BaseServices {
-  // constructor(protected ApiEndPointUrl: string, private jwt?: string | null) {}
 
   protected static getAxiosConfiguration(jwt?: string | null): AxiosRequestConfig | undefined {
     if (jwt === undefined || jwt === null) {
@@ -50,15 +49,10 @@ export abstract class BaseServices {
     debugger
     try {
       const res = await this.axios.post<TEntity>(url, object, { headers: BaseServices.getAxiosConfiguration(jwt)?.headers })
-      // if (res.status >= 200 && res.status < 300) {
       return {
         statusCode: res.status,
         data: res.data as TEntity | TEntity[],
         messages: [res.statusText],
-
-        // }
-        // } else {
-        // return { statusCode: res.status, messages: Object.values(res.data.errors).flatMap((x) => x) as string[] }
       }
     } catch (error) {
       console.log((error as Error).message)

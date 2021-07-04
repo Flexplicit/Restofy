@@ -9,7 +9,7 @@ import { IUserRegister } from '../../types/IAccountTypes/IUserRegister'
 import { IResponseMessage } from '../../types/IResponseMessage'
 const MyRestaurantCreate = () => {
     const appState = useContext(AppContext)
-    const [restaurantState, setRestaurantState] = useState({ name: "", description: "", restaurantAddress: "", picture: "" } as IRestaurantCreate)
+    const [restaurantState, setRestaurantState] = useState({} as IRestaurantCreate)
     const [errorMessageState, setErrorMessageState] = useState([] as string[])
 
     const onClick = async (e: Event) => {
@@ -61,7 +61,7 @@ const MyRestaurantCreate = () => {
                     {/* <ErrorMessage show={errorMessageState.length > 0} errors={errorMessageState} /> */}
                     <div className="form-group">
                         <label className="control-label" htmlFor="Name">Name</label>
-                        <input className="form-control" onChange={e => setRestaurantState({ ...restaurantState, name: e.target.value })} type="text" id="Name" />
+                        <input className="form-control" onChange={e => setRestaurantState({ ...restaurantState, nameLang: e.target.value })} type="text" id="Name" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="Address">Address</label>
@@ -69,7 +69,7 @@ const MyRestaurantCreate = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="Description">Description</label>
-                        <input className="form-control" onChange={e => setRestaurantState({ ...restaurantState, description: e.target.value })} type="text" id="Description" />
+                        <input className="form-control" onChange={e => setRestaurantState({ ...restaurantState, descriptionLang: e.target.value })} type="text" id="Description" />
                     </div>
                     <div className="form-group t-1">
                         <div className="input-group shadow">

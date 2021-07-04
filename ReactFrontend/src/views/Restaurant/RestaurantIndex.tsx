@@ -14,8 +14,8 @@ const RestaurantRows = (props: { restaurant: IRestaurant }) => {
                 <div className="d-flex flex-column">
                     <div className="borders">
                         <img className="restaurantImage text-in-hover" src={props.restaurant.picture} alt="logo" width="300" height="200" />
-                        <div className="p-2 restaurant_name text-in-hover">{props.restaurant.name}</div>
-                        <div className="p-2 text-in-hover">{props.restaurant.description}</div>
+                        <div className="p-2 restaurant_name text-in-hover">{props.restaurant.nameLang}</div>
+                        <div className="p-2 text-in-hover">{props.restaurant.descriptionLang}</div>
                         <div className="p-2 text-in-hover">{props.restaurant.restaurantAddress}</div>
                         {/* <div className="p-2 socials"></div> */}
                     </div>

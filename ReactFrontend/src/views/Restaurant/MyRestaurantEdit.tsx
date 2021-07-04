@@ -9,7 +9,7 @@ import { BaseServices } from '../../services/base-service'
 
 const MyRestaurantEdit = () => {
     const appState = useContext(AppContext)
-    const [restaurantState, setRestaurantState] = useState({ id: "", name: "", description: "", restaurantAddress: "", picture: "" } as IRestaurantEdit)
+    const [restaurantState, setRestaurantState] = useState({} as IRestaurantEdit)
     const [errorMessageState, setErrorMessageState] = useState([] as string[])
     const { id } = useParams<{ id: string }>();
 
@@ -75,8 +75,8 @@ const MyRestaurantEdit = () => {
                     <div className="form-group">
                         <label className="control-label" htmlFor="Name">Name</label>
                         <input className="form-control"
-                            onChange={e => setRestaurantState({ ...restaurantState, name: e.target.value })}
-                            value={restaurantState.name}
+                            onChange={e => setRestaurantState({ ...restaurantState, nameLang: e.target.value })}
+                            value={restaurantState.nameLang}
                             type="text" id="Name" />
                     </div>
                     <div className="form-group">
@@ -88,8 +88,8 @@ const MyRestaurantEdit = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="Description">Description</label>
-                        <input className="form-control" onChange={e => setRestaurantState({ ...restaurantState, description: e.target.value })}
-                            value={restaurantState.description}
+                        <input className="form-control" onChange={e => setRestaurantState({ ...restaurantState, descriptionLang: e.target.value })}
+                            value={restaurantState.descriptionLang}
                             type="text" id="Description" />
                     </div>
                     <div className="form-group t-1">
