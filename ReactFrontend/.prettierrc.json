@@ -1,0 +1,9 @@
+{
+  "printWidth": 170,
+  "htmlWhitespaceSensitivity": "ignore",
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "editor.formatOnSave": true
+}
